@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+
+    tools:context=".classactivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+        android:elevation="4dp"
+
+        />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Today's Class Schedule"
+            android:textSize="30sp"
+            android:padding="2dp"
+            android:textColor="@color/colorPrimary"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            />
+
+        <View android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:background="@color/colorPrimary">
+
+        </View>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout android:layout_height="match_parent"
+                    android:layout_width="match_parent">
+
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Date : "
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"/>
+
+                    <TextView
+                        android:id="@+id/classsdate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:textColor="#D318B2"/>
+
+                </LinearLayout>
+
+                <TableRow android:weightSum="2">
+
+                    <TextView android:layout_width="match_parent"
+                        android:layout_weight="0"
+                        android:layout_height="wrap_content"
+                        android:text="Class Room : "
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"/>
+
+                    <TextView
+                        android:id="@+id/classsroom"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        android:textColor="#D50000"/>
+
+                </TableRow>
+
+
+            </TableLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="291dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp">
+
+        <TableRow
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_square"
+                android:padding="10dp"
+                android:text="Course Code"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_buttom_right_top"
+                android:padding="10dp"
+                android:text="Time     "
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_buttom_right_top"
+                android:padding="10dp"
+                android:text="Set Alarm"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+
+        </TableRow>
+
+        <TableRow android:weightSum="3">
+
+            <TextView
+                android:id="@+id/showcoursecode1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_left_button_right"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Empty"
+                android:textColor="#D318B2"
+                android:textStyle="bold"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/showtimeid1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_button_right"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="---:---    "
+                android:textColor="#D50000"
+                android:textStyle="bold"
+                android:textSize="15sp" />
+
+
+            <Button
+                android:id="@+id/showalarmid1"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_button_right"
+                android:padding="10dp"
+                android:text="Alarm1"
+                android:textAllCaps="false"
+                android:textColor="#6200EA"
+                android:textStyle="bold" />
+
+
+        </TableRow>
+
+        <TableRow android:weightSum="3">
+
+            <TextView
+                android:id="@+id/showcoursecode2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_left_button_right"
+                android:gravity="center"
+                android:padding="10dp"
+
+                android:text="Empty"
+                android:textColor="#D318B2"
+                android:textStyle="bold"
+                android:textSize="15sp" />
+
+            <TextView
+
+                android:id="@+id/showtimeid2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_button_right"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="---:---    "
+                android:textStyle="bold"
+                android:textColor="#D50000"
+                android:textSize="15sp" />
+
+
+            <Button
+
+                android:id="@+id/showalarmid2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_button_right"
+                android:padding="10dp"
+                android:text="Alarm2"
+                android:textAllCaps="false"
+                android:textColor="#6200EA"
+                android:textStyle="bold" />
+
+
+        </TableRow>
+
+        <TableRow android:weightSum="3">
+
+            <TextView
+                android:id="@+id/showcoursecode3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_left_button_right"
+                android:gravity="center"
+                android:padding="10dp"
+
+                android:text="Empty"
+                android:textColor="#D318B2"
+                android:textStyle="bold"
+                android:textSize="15sp" />
+
+            <TextView
+
+                android:id="@+id/showtimeid3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_button_right"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:text="---:---    "
+                android:textColor="#D50000"
+                android:textSize="15sp" />
+
+
+            <Button
+
+                android:id="@+id/showalarmid3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_button_right"
+                android:padding="10dp"
+                android:text="Alarm3"
+                android:textAllCaps="false"
+                android:textColor="#6200EA"
+                android:textStyle="bold" />
+
+
+        </TableRow>
+
+        <TableRow android:weightSum="3">
+
+            <TextView
+                android:id="@+id/showcoursecode4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_left_button_right"
+                android:gravity="center"
+                android:padding="10dp"
+
+                android:text="Empty"
+                android:textColor="#D318B2"
+                android:textStyle="bold"
+                android:textSize="15sp" />
+
+
+            <TextView
+
+                android:id="@+id/showtimeid4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_button_right"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="---:---    "
+                android:textStyle="bold"
+                android:textColor="#D50000"
+                android:textSize="15sp" />
+
+            <Button
+
+                android:id="@+id/showalarmid4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_button_right"
+                android:padding="10dp"
+                android:text="Alarm4"
+                android:textAllCaps="false"
+                android:textColor="#6200EA"
+                android:textStyle="bold" />
+
+
+        </TableRow>
+
+        <TableRow android:weightSum="3">
+
+            <TextView
+                android:id="@+id/showcoursecode5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_left_button_right"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textColor="#D318B2"
+                android:textStyle="bold"
+
+                android:text="Empty"
+                android:textSize="15sp" />
+
+            <TextView
+
+                android:id="@+id/showtimeid5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_button_right"
+                android:gravity="center"
+                android:padding="10dp"
+
+                android:text="---:---    "
+                android:textColor="#D50000"
+                android:textStyle="bold"
+                android:textSize="15sp" />
+
+
+            <Button
+
+                android:id="@+id/showalarmid5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_button_right"
+                android:padding="10dp"
+                android:text="Alarm5"
+                android:textAllCaps="false"
+                android:textColor="#6200EA"
+                android:textStyle="bold" />
+
+
+        </TableRow>
+
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/classtimebackid"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Back"
+        android:textAllCaps="false"
+        android:background="@drawable/submitbordar"
+        android:textSize="20sp"
+        android:textColor="#fff"
+        android:padding="10dp"/>
+
+
+
+</LinearLayout>

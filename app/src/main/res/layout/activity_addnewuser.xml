@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".addnewuser">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+        android:elevation="4dp"
+
+        />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+
+            android:layout_marginTop="0dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/addusericon"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="30dp"
+
+                />
+
+            <!--<TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="নাম*"
+                android:textColor="@color/red"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/writeYourName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:hint="আপনার নাম লিখুন"
+                android:textAlignment="center"
+                android:background="@drawable/sampleboxborderinred"
+                android:padding="10dp"
+                android:inputType="textPersonName"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="মোবাইল নাম্বার*"
+                android:textColor="@color/red"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textStyle="bold"
+
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:textSize="20sp"/>
+            <EditText
+                android:id="@+id/writePhnNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="আপনার মোবাইল নাম্বারটি লিখুন"
+
+                android:textSize="20sp"
+                android:background="@drawable/sampleboxborderinred"
+                android:padding="10dp"
+                android:textAlignment="center"
+                android:inputType="phone"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                />-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email*"
+                android:textColor="@color/colorPrimary"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textStyle="bold"
+
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:textSize="20sp"/>
+
+
+            <EditText
+                android:id="@+id/signUpmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:hint="Enter Email Address"
+                android:textAlignment="center"
+                android:background="@drawable/sampleboxborderinred"
+                android:padding="10dp"
+                android:inputType="textEmailAddress"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Password*"
+                android:textColor="@color/colorPrimary"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textStyle="bold"
+
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="0dp"
+                android:textSize="20sp"/>
+            <EditText
+                android:id="@+id/signUpPass1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:hint="Enter Password"
+                android:textAlignment="center"
+                android:background="@drawable/sampleboxborderinred"
+                android:padding="10dp"
+                android:inputType="textPassword"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                />
+            <!--          <EditText
+                          android:id="@+id/repeatPass1"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_gravity="center"
+                          android:textSize="20sp"
+                          android:hint="Enter Your Password"
+                          android:textAlignment="center"
+                          android:background="@drawable/sampleboxborderinred"
+                          android:padding="10dp"
+                          android:inputType="textPassword"
+                          android:layout_marginBottom="15dp"
+                          android:layout_marginLeft="15dp"
+                          android:layout_marginRight="15dp"
+                          />-->
+
+            <Button
+                android:id="@+id/signUpss"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Sign Up"
+                android:textColor="#fff"
+                android:background="@drawable/submitbordar"
+                android:textAlignment="center"
+                android:layout_margin="0dp"
+                android:textSize="15dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:padding="15dp"/>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".new_app_menu">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+        android:elevation="4dp"
+
+        />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/btncolor">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#fff"
+                android:layout_margin="10dp"
+                >
+
+
+
+
+                <!--<ImageView
+                    android:layout_weight="0"
+                    android:layout_width="match_parent"
+                    android:layout_height="199dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/banner"/>-->
+
+                <!--<TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textSize="30sp"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"/>-->
+
+                <LinearLayout
+
+                    android:layout_weight="0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+
+
+
+
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+
+
+                        <androidx.cardview.widget.CardView
+
+                            android:id="@+id/crdclassscheduleid"
+
+                            android:layout_weight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:padding="100dp"
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            >
+
+                            <LinearLayout
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/btncolor"
+                                android:orientation="vertical">
+
+
+                                <ImageView
+                                    android:paddingTop="20dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/settimeicon"/>
+                                <TextView
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="Class Schedule "
+                                    android:textColor="#fff"
+                                    android:textStyle="bold"
+                                    android:textSize="15sp"
+                                    android:fontFamily="@font/solaimanlipi"
+                                    android:padding="10dp"
+                                    />
+
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+
+                            android:id="@+id/crdnoticeboardid"
+
+                            android:layout_weight="1"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:padding="100dp"
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            >
+
+                            <LinearLayout
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/btncolor2"
+                                android:orientation="vertical">
+
+
+                                <ImageView
+                                    android:paddingTop="20dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/noticeclip"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="Notice Board"
+                                    android:textColor="@color/txtwhite"
+                                    android:textSize="15sp"
+                                    android:fontFamily="@font/solaimanlipi"
+
+                                    android:textStyle="bold" />
+
+                                <!-- <View
+                                     android:layout_width="match_parent"
+                                     android:layout_height="1dp"
+                                     android:background="@color/colorPrimary"/>
+
+                                 <TextView
+                                     android:layout_gravity="center"
+                                     android:gravity="center"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="match_parent"
+                                     android:text="Dhaka University"
+                                     android:textColor="@color/colorPrimary"
+                                     android:textStyle="bold"
+                                     android:textSize="20sp"
+                                     android:paddingBottom="20dp"
+                                     />
+
+                 -->
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+
+
+                        <androidx.cardview.widget.CardView
+
+                            android:id="@+id/crdcurriculumid"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:padding="100dp"
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            >
+
+                            <LinearLayout
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/btncolor3"
+                                android:orientation="vertical">
+
+
+                                <ImageView
+                                    android:paddingTop="20dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/curriculum2"/>
+                                <TextView
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="Curriculum"
+                                    android:textColor="@color/txtwhite"
+                                    android:textStyle="bold"
+                                    android:textSize="15sp"
+                                    android:fontFamily="@font/solaimanlipi"
+
+                                    android:padding="10dp"
+                                    />
+
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/crdbusscheduleid"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:padding="100dp"
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            >
+
+                            <LinearLayout
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/btncolor4"
+                                android:orientation="vertical">
+
+
+                                <ImageView
+                                    android:paddingTop="20dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/busschedule"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="Bus Schedule"
+                                    android:textColor="@color/txtwhite"
+                                    android:textSize="15sp"
+                                    android:fontFamily="@font/solaimanlipi"
+
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+
+
+                        <androidx.cardview.widget.CardView
+
+                            android:id="@+id/crdfacebookgrpid"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:padding="100dp"
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            >
+
+                            <LinearLayout
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/btncolor3"
+                                android:orientation="vertical">
+
+
+                                <ImageView
+                                    android:paddingTop="20dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/grp2"/>
+                                <TextView
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="Facebook Group"
+                                    android:textColor="@color/txtwhite"
+                                    android:textStyle="bold"
+                                    android:textSize="15sp"
+                                    android:fontFamily="@font/solaimanlipi"
+
+                                    android:padding="10dp"
+                                    />
+
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/crdadminpanelid"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:padding="100dp"
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            >
+
+                            <LinearLayout
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/btncolor4"
+                                android:orientation="vertical">
+
+
+                                <ImageView
+                                    android:paddingTop="20dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/adminpanel2"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="Admin Panel"
+                                    android:textColor="@color/txtwhite"
+                                    android:textSize="15sp"
+                                    android:fontFamily="@font/solaimanlipi"
+
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    tools:context=".addclasstimeactivity"
+    android:weightSum="9">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+        android:elevation="4dp"
+
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Set Class Schedule"
+        android:textSize="30sp"
+        android:padding="2dp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"/>
+
+
+    <TableLayout
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp">
+
+        <TableRow
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="4">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_square"
+                android:padding="10dp"
+                android:text="Course Code"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_buttom_right_top"
+                android:padding="10dp"
+                android:text="Hour"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_buttom_right_top"
+                android:padding="10dp"
+                android:text="MIN"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_buttom_right_top"
+                android:padding="10dp"
+                android:text="AM/PM"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="4">
+
+            <EditText
+                android:id="@+id/coursecode1ic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_left_button_right"
+                android:hint="Course Code1"
+                android:padding="10dp"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/coursecode1hourid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_button_right"
+                android:hint="Hour"
+                android:padding="10dp"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/coursecode1minid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_button_right"
+                android:hint="Minute"
+                android:padding="10dp"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/coursecode1ampmid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_button_right"
+                android:hint="AM/PM"
+                android:padding="10dp"
+                android:textColor="@color/colorPrimary" />
+
+            <!-- <Button
+                android:id="@+id/coursecode1btnid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bordar_button_right"
+                android:padding="10dp"
+                android:text="ChooseTime"
+                android:textAllCaps="false" />
+
+
+            <TextView
+                android:id="@+id/coursecode1textid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bordar_button_right"
+                android:padding="10dp"
+                android:text="Show TIme"
+                android:textColor="@color/colorPrimary" />-->
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="4">
+
+            <EditText
+                android:id="@+id/coursecode2ic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_left_button_right"
+                android:hint="Course Code2"
+                android:padding="10dp"
+                android:textColor="@color/colorPrimary" />
+
+
+            <EditText
+                android:id="@+id/coursecode2hourid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_button_right"
+                android:hint="Hour"
+                android:padding="10dp"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/coursecode2minid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_button_right"
+                android:hint="Minute"
+                android:padding="10dp"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/coursecode2ampmid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_button_right"
+                android:hint="AM/PM"
+                android:padding="10dp"
+                android:textColor="@color/colorPrimary" />
+
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="4">
+
+            <EditText
+                android:id="@+id/coursecode3ic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_left_button_right"
+                android:hint="Course Code3"
+                android:padding="10dp"
+                android:textColor="@color/colorPrimary" />
+
+
+            <EditText
+                android:id="@+id/coursecode3hourid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_button_right"
+                android:hint="Hour"
+                android:padding="10dp"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/coursecode3minid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_button_right"
+                android:hint="Minute"
+                android:padding="10dp"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/coursecode3ampmid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_button_right"
+                android:hint="AM/PM"
+                android:padding="10dp"
+                android:textColor="@color/colorPrimary" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="4">
+
+            <EditText
+                android:id="@+id/coursecode4ic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_left_button_right"
+                android:hint="Course Code4"
+                android:padding="10dp"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/coursecode4hourid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_button_right"
+                android:hint="Hour"
+                android:padding="10dp"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/coursecode4minid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_button_right"
+                android:hint="Minute"
+                android:padding="10dp"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/coursecode4ampmid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_button_right"
+                android:hint="AM/PM"
+                android:padding="10dp"
+                android:textColor="@color/colorPrimary" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="4">
+
+            <EditText
+                android:id="@+id/coursecode5ic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_left_button_right"
+                android:hint="Course Code5"
+                android:padding="10dp"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/coursecode5hourid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_button_right"
+                android:hint="Hour"
+                android:padding="10dp"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/coursecode5minid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_button_right"
+                android:hint="Minute"
+                android:padding="10dp"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/coursecode5ampmid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bordar_button_right"
+                android:hint="AM/PM"
+                android:padding="10dp"
+                android:textColor="@color/colorPrimary" />
+
+        </TableRow>
+
+
+    </TableLayout>
+<!--
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date: "
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"/>
+
+        <EditText
+            android:id="@+id/eDateid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="DD-MM-YY"
+            android:textColor="@color/colorPrimary"/>
+
+
+    </LinearLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date : "
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+            <EditText
+                android:id="@+id/classdateid1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="DD-MM-YY"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <Button
+
+        android:id="@+id/classtimesubmitid"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/submitbordar"
+        android:padding="10dp"
+        android:text="Submit"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="20sp" />
+
+
+</LinearLayout>

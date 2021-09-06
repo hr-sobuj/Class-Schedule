@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"-->
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nvclassschedulehome"
+            android:title="Home"
+            android:icon="@drawable/navhomeicon"/>
+
+        <item android:id="@+id/nvtodayclassschedules"
+            android:title="Today's Class Schedule"
+            android:icon="@drawable/nvtodaysclassschedule"/>
+
+        <item android:id="@+id/nvnoticeboardid"
+            android:title="Notice Board"
+            android:icon="@drawable/nvnotice"/>
+
+        <item android:id="@+id/nvcurriculamid"
+            android:title="Curriculam"
+            android:icon="@drawable/nvcurriculam"/>
+
+        <item android:id="@+id/nvbusscheduleid"
+            android:title="Bus Schedule"
+            android:icon="@drawable/navbusicon"/>
+
+        <item android:id="@+id/nvfacebookgrpid"
+            android:title="Facebook Group"
+            android:icon="@drawable/navfbgrp"/>
+
+
+
+        <item android:id="@+id/nvsettimeid"
+            android:title="Admin Panel"
+            android:icon="@drawable/nvsettime"/>
+
+
+    </group>
+
+    <item android:title="Contact">
+
+
+        <menu>
+
+            <item android:id="@+id/nvrating"
+                android:title="Rating"
+                android:icon="@drawable/navrating"/>
+
+           <!-- <item android:id="@+id/nvfeedback"
+                android:title="Feedback"
+                android:icon="@drawable/navfeedback"/>-->
+
+            <item android:id="@+id/nvshareid"
+                android:title="Share"
+                android:icon="@drawable/nvshare"/>
+
+            <item android:id="@+id/nvaboutthisappid"
+                android:title="About Application"
+                android:icon="@drawable/nvapp"/>
+
+            <item android:id="@+id/nvdeveloperid"
+                android:title="Developer"
+                android:icon="@drawable/nvdeveloper"/>
+
+            <item android:id="@+id/nvexitic"
+                android:title="Exit"
+                android:icon="@drawable/exit_main"/>
+
+
+        </menu>
+
+    </item>
+
+
+</menu>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".importantNotice">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="5dp"
+        android:padding="7dp"
+
+        >
+        <TextView
+
+            android:layout_width="440dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/submitborder_square1"
+
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Important Notice"
+            android:textColor="#fff"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+
+        <TableLayout
+            android:padding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bordar_left_button_right">
+
+            <LinearLayout android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Title : "
+                    android:textSize="20sp"
+                    android:textColor="#000"
+
+
+                    android:padding="2dp"/>
+
+                <TextView
+                    android:layout_weight="2"
+
+                    android:id="@+id/importantnoticefragmentidtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/red"
+
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:padding="2dp"/>
+
+
+            </LinearLayout>
+
+
+            <!--<TableRow>
+
+                &lt;!&ndash;<TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Title : "
+                    android:textSize="20sp"
+                    android:textColor="#000"
+
+
+                    android:padding="2dp"/>&ndash;&gt;
+
+
+                <TextView
+
+                    android:id="@+id/importantnoticefragmentidtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/red"
+
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:padding="2dp"/>
+
+            </TableRow>-->
+
+            <TableRow android:background="@drawable/bordar_button"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Date : "
+                    android:textSize="20sp"
+                    android:textColor="#000"
+
+                    android:padding="2dp"/>
+
+
+                <TextView
+
+                    android:id="@+id/importantnoticefragmentiddate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:padding="2dp"/>
+
+            </TableRow>
+
+
+           <!-- <TableRow   >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="20sp"
+
+                    android:textColor="#000"
+
+
+                    android:padding="2dp"/>
+
+
+
+
+            </TableRow>-->
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/importantnoticefragmentid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="20sp"
+
+                android:textColor="#000"
+                android:textIsSelectable="true"
+                android:padding="2dp"/>
+
+
+        </TableLayout>
+</ScrollView>
+
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

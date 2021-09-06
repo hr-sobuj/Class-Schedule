@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3949AB</color>
+    <color name="colorPrimary1">#8190F1</color>
+    <color name="colorPrimaryDark">#3949AB</color>
+    <color name="colorAccent">#8190F1</color>
+    <color name="red">#D50000</color>
+    <color name="activedots">#00C853</color>
+    <color name="inactivesdots">#304FFE</color>
+    <color name="blues">#3949AB</color>
+
+    <color name="btncolor">#4B5BBA</color>
+    <color name="btncolor2">#4B5BBA</color>
+    <color name="btncolor3">#4B5BBA</color>
+    <color name="btncolor4">#4B5BBA</color>
+    <color name="btncolor5">#4B5BBA</color>
+    <color name="btncolor6">#4B5BBA</color>
+
+    <color name="txtcolor">#D50000</color>
+    <color name="txtwhite">#fff</color>
+    <color name="bgbackground">#EDE4C5</color>
+    <color name="blue">#3949AB</color>
+
+</resources>

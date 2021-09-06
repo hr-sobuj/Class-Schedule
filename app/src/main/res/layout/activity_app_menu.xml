@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="3"
+    android:orientation="vertical"
+    tools:context=".AppMenu">
+  <!--  <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+        android:elevation="4dp"
+
+        />-->
+
+
+
+
+
+
+
+
+
+   <!-- <androidx.viewpager.widget.ViewPager
+        android:layout_weight="1"
+        android:id="@+id/viewpagerForSlid"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_gravity="center"
+
+        android:layout_height="145dp"/>
+
+    <me.relex.circleindicator.CircleIndicator
+        android:id="@+id/indicator1"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/colorPrimary"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="-26dp"/>
+
+
+    <TableLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow android:weightSum="3">
+
+
+            <Button
+                android:id="@+id/clsid"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#F8A9A9"
+                android:text="Class"
+                android:drawableTop="@drawable/classtimeicon"
+                android:textAllCaps="false"
+                android:padding="20dp"
+
+
+                />
+            <Button
+                android:id="@+id/noticeid"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#B6F1FA"
+                android:padding="20dp"
+
+                android:text="Notice"
+                android:drawableTop="@drawable/noticeicon"
+
+                android:textAllCaps="false"
+
+                />
+            <Button
+                android:id="@+id/teacherid"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#FADEA2"
+                android:padding="20dp"
+                android:text="Teachers"
+                android:drawableTop="@drawable/teachericon1"
+                android:textAllCaps="false"
+
+                />
+        </TableRow>
+        <TableRow android:weightSum="3"
+            >
+
+
+            <Button
+                android:id="@+id/cse18id"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#D9A2F5"
+                android:padding="20dp"
+                android:text="CSE18"
+                android:textAllCaps="false"
+                android:drawableTop="@drawable/aboutcse18icon"
+                />
+            <Button
+                android:id="@+id/curriculamic"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#B3BDF3"
+                android:padding="20dp"
+                android:text="Curriculam"
+                android:textAllCaps="false"
+                android:drawableTop="@drawable/curriculamicon"
+                />
+            <Button
+                android:id="@+id/settimeid"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#B0D6EE"
+                android:padding="20dp"
+                android:text="Set Time"
+                android:textAllCaps="false"
+                android:drawableTop="@drawable/settimeicon"
+                />
+        </TableRow>
+
+
+
+
+    </TableLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_weight="1"
+
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:gravity="bottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="0"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <TextView
+                android:layout_weight="0"
+                android:id="@+id/facebookGroupid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Facebook Group ||"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="0dp"
+                android:textSize="15sp"
+                />
+
+
+
+
+            <TextView
+                android:layout_weight="0"
+                android:id="@+id/busscheduleid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Bus Schedule"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="0dp"
+                android:textSize="15sp"
+                />
+        </LinearLayout>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="© Dept. of Computer Science and Engineering."
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="0dp"
+            android:textSize="15sp"
+            />
+
+    </LinearLayout>
+
+-->
+
+</LinearLayout>

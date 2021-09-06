@@ -1,0 +1,797 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".teacheractivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Our Honourable Teacher"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"/>
+
+            <TableRow
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="3">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_square"
+                    android:padding="10dp"
+                    android:text="Name"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_buttom_right_top"
+                    android:padding="10dp"
+                    android:text="DSGN"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_buttom_right_top"
+                    android:padding="10dp"
+                    android:text="Mobile"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="3">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_left_button_right"
+                    android:padding="5dp"
+                    android:text="Md. Abdulla Al Mamun"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_button_right"
+                    android:padding="5dp"
+                    android:text="Associate Professor"
+                    android:textColor="@color/colorPrimary" />
+
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_button_right"
+                    android:padding="5dp"
+                    android:text="+8801718890345"
+                    android:textColor="@color/colorPrimary"
+                    android:textIsSelectable="true"/>
+
+
+            </TableRow>
+            ///////////////////////////////////////////////////////////////////////////////////
+            <TableRow
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="3">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_left_button_right"
+                    android:padding="5dp"
+                    android:text="Adiba Mahjabin Nitu"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_button_right"
+                    android:padding="5dp"
+                    android:text="Associate Professor"
+                    android:textColor="@color/colorPrimary" />
+
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_button_right"
+                    android:padding="5dp"
+                    android:text="+8801716407820"
+                    android:textColor="@color/colorPrimary"
+                    android:textIsSelectable="true"/>
+
+
+            </TableRow>
+            /////////////////////////////////////////////////////////////////////////////////////
+            <TableRow
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="3">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_left_button_right"
+                    android:padding="5dp"
+                    android:text="Delowar Hossain"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_button_right"
+                    android:padding="5dp"
+                    android:text="Associate Professor"
+                    android:textColor="@color/colorPrimary" />
+
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_button_right"
+                    android:padding="5dp"
+                    android:text="+8801712262634"
+                    android:textColor="@color/colorPrimary"
+                    android:textIsSelectable="true"/>
+
+
+            </TableRow>
+            /////////////////////////////////////////////////////////////////////////////////////////////////////
+            <TableRow
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="3">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_left_button_right"
+                    android:padding="5dp"
+                    android:text="Ashis Kumar Mandal"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_button_right"
+                    android:padding="5dp"
+                    android:text="Associate Professor"
+                    android:textColor="@color/colorPrimary" />
+
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_button_right"
+                    android:padding="5dp"
+                    android:text="+8801912136021"
+                    android:textColor="@color/colorPrimary"
+                    android:textIsSelectable="true"/>
+
+
+            </TableRow>
+            /////////////////////////////////////////////////////////
+            <TableRow
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="3">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_left_button_right"
+                    android:padding="5dp"
+                    android:text="Dr. Arshad Ali"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_button_right"
+                    android:padding="5dp"
+                    android:text="Associate Professor"
+                    android:textColor="@color/colorPrimary" />
+
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_button_right"
+                    android:padding="5dp"
+                    android:text="+8801719470550"
+                    android:textColor="@color/colorPrimary"
+                    android:textIsSelectable="true"/>
+
+
+            </TableRow>
+            ////////////////////////////////////////////////////////////
+            <TableRow
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="3">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_left_button_right"
+                    android:padding="5dp"
+                    android:text="Md.Fazle Rabbi"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_button_right"
+                    android:padding="5dp"
+                    android:text="Associate Professor"
+                    android:textColor="@color/colorPrimary" />
+
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_button_right"
+                    android:padding="5dp"
+                    android:text="+8801717012945"
+                    android:textColor="@color/colorPrimary"
+                    android:textIsSelectable="true"/>
+
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="3">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_left_button_right"
+                    android:padding="5dp"
+                    android:text="Masud Ibn Afjal"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_button_right"
+                    android:padding="5dp"
+                    android:text="Assistant Professor"
+                    android:textColor="@color/colorPrimary" />
+
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_button_right"
+                    android:padding="5dp"
+                    android:text="+8801737049633"
+                    android:textColor="@color/colorPrimary"
+                    android:textIsSelectable="true"/>
+
+
+            </TableRow>
+
+
+            ///////////////////
+
+
+
+
+            <TableRow
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="3">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_left_button_right"
+                    android:padding="5dp"
+                    android:text="Md. Nadim"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_button_right"
+                    android:padding="5dp"
+                    android:text="Assistant Professor"
+                    android:textColor="@color/colorPrimary" />
+
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_button_right"
+                    android:padding="5dp"
+                    android:text="+8801723918502"
+                    android:textColor="@color/colorPrimary"
+                    android:textIsSelectable="true"/>
+
+
+            </TableRow>
+
+
+            ///////////////////
+
+
+            <TableRow
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="3">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_left_button_right"
+                    android:padding="5dp"
+                    android:text="Hasi Saha"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_button_right"
+                    android:padding="5dp"
+                    android:text="Assistant Professor"
+                    android:textColor="@color/colorPrimary" />
+
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_button_right"
+                    android:padding="5dp"
+                    android:text="+8801719042157"
+                    android:textColor="@color/colorPrimary"
+                    android:textIsSelectable="true"/>
+
+
+            </TableRow>
+
+
+            ///////////////////
+
+
+
+
+            <TableRow
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="3">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_left_button_right"
+                    android:padding="5dp"
+                    android:text="Md. Ahsan Habib"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_button_right"
+                    android:padding="5dp"
+                    android:text="Assistant Professor"
+                    android:textColor="@color/colorPrimary" />
+
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_button_right"
+                    android:padding="5dp"
+                    android:text="+8801730668877"
+                    android:textColor="@color/colorPrimary"
+                    android:textIsSelectable="true"/>
+
+
+            </TableRow>
+
+
+            ///////////////////
+
+
+
+
+            <TableRow
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="3">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_left_button_right"
+                    android:padding="5dp"
+                    android:text="Md. Palash Uddin"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_button_right"
+                    android:padding="5dp"
+                    android:text="Assistant Professor"
+                    android:textColor="@color/colorPrimary" />
+
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_button_right"
+                    android:padding="5dp"
+                    android:text="+8801722841941"
+                    android:textColor="@color/colorPrimary"
+                    android:textIsSelectable="true"/>
+
+
+            </TableRow>
+
+
+            ///////////////////
+
+
+            <TableRow
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="3">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_left_button_right"
+                    android:padding="5dp"
+                    android:text="Emran Ali"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_button_right"
+                    android:padding="5dp"
+                    android:text="Assistant Professor"
+                    android:textColor="@color/colorPrimary" />
+
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_button_right"
+                    android:padding="5dp"
+                    android:text="+8801737471626"
+                    android:textColor="@color/colorPrimary"
+                    android:textIsSelectable="true"/>
+
+
+            </TableRow>
+
+
+            ///////////////////
+
+
+
+            <TableRow
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="3">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_left_button_right"
+                    android:padding="5dp"
+                    android:text="Md. Rashedul Islam"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_button_right"
+                    android:padding="5dp"
+                    android:text="Assistant Professor"
+                    android:textColor="@color/colorPrimary" />
+
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_button_right"
+                    android:padding="5dp"
+                    android:text="+8801737334004"
+                    android:textColor="@color/colorPrimary"
+                    android:textIsSelectable="true"/>
+
+
+            </TableRow>
+
+
+            ///////////////////
+
+
+
+            <TableRow
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="3">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_left_button_right"
+                    android:padding="5dp"
+                    android:text="Md. Nahid Sultan"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_button_right"
+                    android:padding="5dp"
+                    android:text="Assistant Professor"
+                    android:textColor="@color/colorPrimary" />
+
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_button_right"
+                    android:padding="5dp"
+                    android:text="+8801722692111"
+                    android:textColor="@color/colorPrimary"
+                    android:textIsSelectable="true"/>
+
+
+            </TableRow>
+
+
+            ///////////////////
+
+
+
+            <TableRow
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="3">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_left_button_right"
+                    android:padding="5dp"
+                    android:text="Md. Sohrawordi"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_button_right"
+                    android:padding="5dp"
+                    android:text="Assistant Professor"
+                    android:textColor="@color/colorPrimary" />
+
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_button_right"
+                    android:padding="5dp"
+                    android:text="+8801722980888"
+                    android:textColor="@color/colorPrimary"
+                    android:textIsSelectable="true"/>
+
+
+            </TableRow>
+
+
+            ///////////////////
+
+
+
+            <TableRow
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="3">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_left_button_right"
+                    android:padding="5dp"
+                    android:text="U.A. Md. Ehsan Ali"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_button_right"
+                    android:padding="5dp"
+                    android:text="Assistant Professor"
+                    android:textColor="@color/colorPrimary" />
+
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_button_right"
+                    android:padding="5dp"
+                    android:text="+8801710488079"
+                    android:textColor="@color/colorPrimary"
+                    android:textIsSelectable="true"/>
+
+
+            </TableRow>
+
+
+            ///////////////////
+
+
+
+
+            <TableRow
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="3">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_left_button_right"
+                    android:padding="5dp"
+                    android:text="Md. Shajalal"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_button_right"
+                    android:padding="5dp"
+                    android:text="Lecturer"
+                    android:textColor="@color/colorPrimary" />
+
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_button_right"
+                    android:padding="5dp"
+                    android:text="+8801725359628"
+                    android:textColor="@color/colorPrimary"
+                    android:textIsSelectable="true"/>
+
+
+            </TableRow>
+
+
+            ///////////////////
+
+
+
+
+            <TableRow
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="3">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_left_button_right"
+                    android:padding="5dp"
+                    android:text="Md. Abu Marjan"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_button_right"
+                    android:padding="5dp"
+                    android:text="Lecturer"
+                    android:textColor="@color/colorPrimary" />
+
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordar_button_right"
+                    android:padding="5dp"
+                    android:text="+8801723791394"
+                    android:textColor="@color/colorPrimary"
+                    android:textIsSelectable="true"/>
+
+
+            </TableRow>
+
+
+            ///////////////////
+
+
+
+
+
+
+
+        </TableLayout>
+    </ScrollView>
+
+
+</LinearLayout>

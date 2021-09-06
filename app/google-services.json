@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1009525802510",
+    "firebase_url": "https://classtime-fa35a.firebaseio.com",
+    "project_id": "classtime-fa35a",
+    "storage_bucket": "classtime-fa35a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1009525802510:android:cb2ca8b6936ed8a7e4de5f",
+        "android_client_info": {
+          "package_name": "com.classschedule.classtime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1009525802510-u1bvuekv7go374ap8vprdrrltomsvptc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.classschedule.classtime",
+            "certificate_hash": "18ac9b59ec745bef28041a2c5eb915231831ded0"
+          }
+        },
+        {
+          "client_id": "1009525802510-u8do6e1q7ikr71aiidbhqtgdsaj93vrp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUymsbgMGNfCHsjukZpawJkYKZYvOCi8U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1009525802510-u8do6e1q7ikr71aiidbhqtgdsaj93vrp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
