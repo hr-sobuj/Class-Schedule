@@ -29,7 +29,8 @@
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".ArchiveClass"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".new_app_menu"
             android:theme="@style/AppTheme.NoActionBar" />

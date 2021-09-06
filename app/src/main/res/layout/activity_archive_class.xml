@@ -6,10 +6,24 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_gravity="center"
-    android:layout_marginTop="100dp"
+
     tools:context=".ArchiveClass">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+        android:elevation="4dp"
+        android:layout_marginBottom="100dp"
+
+        />
+
     <EditText
+
         android:id="@+id/datepicker"
         android:clickable="false"
         android:cursorVisible="false"

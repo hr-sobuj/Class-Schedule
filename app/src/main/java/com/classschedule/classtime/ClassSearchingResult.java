@@ -169,14 +169,14 @@ public class ClassSearchingResult extends AppCompatActivity implements View.OnCl
 
         tttclassroom=(TextView) findViewById(R.id.classsroom);
         tttdate=(TextView) findViewById(R.id.classsdate);
-
+        tttdate.setText(searchdate);
 
 
         btnclasstimeback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent intent=new Intent(ClassSearchingResult.this,new_app_menu.class);
+                Intent intent=new Intent(ClassSearchingResult.this,ArchiveClass.class);
                 startActivity(intent);
                 /*finish();
                 finishAffinity();*/
@@ -199,169 +199,168 @@ public class ClassSearchingResult extends AppCompatActivity implements View.OnCl
 
                 progressDialog.dismiss();
 
-                if(!isOnline()){
+                if (!isOnline()) {
                     progressDialog.dismiss();
                 }
 
+                if (!dataSnapshot.exists()) {
+
+                    Intent intent = new Intent(ClassSearchingResult.this, ArchiveClass.class);
+                    startActivity(intent);
+                    Toast.makeText(ClassSearchingResult.this, "Data not found!", Toast.LENGTH_LONG).show();
+                } else {
 
 
 
+                coursecodes1 = dataSnapshot.child("coursecodes1").getValue().toString();
+                coursecodes2 = dataSnapshot.child("coursecodes2").getValue().toString();
+                coursecodes3 = dataSnapshot.child("coursecodes3").getValue().toString();
+                coursecodes4 = dataSnapshot.child("coursecodes4").getValue().toString();
+                coursecodes5 = dataSnapshot.child("coursecodes5").getValue().toString();
 
 
-                coursecodes1=dataSnapshot.child("coursecodes1").getValue().toString();
-                coursecodes2=dataSnapshot.child("coursecodes2").getValue().toString();
-                coursecodes3=dataSnapshot.child("coursecodes3").getValue().toString();
-                coursecodes4=dataSnapshot.child("coursecodes4").getValue().toString();
-                coursecodes5=dataSnapshot.child("coursecodes5").getValue().toString();
+                timeshour1 = dataSnapshot.child("hour1").getValue().toString();
+                timeshour2 = dataSnapshot.child("hour2").getValue().toString();
+                timeshour3 = dataSnapshot.child("hour3").getValue().toString();
+                timeshour4 = dataSnapshot.child("hour4").getValue().toString();
+                timeshour5 = dataSnapshot.child("hour5").getValue().toString();
+
+                timemins1 = dataSnapshot.child("min1").getValue().toString();
+                timemins2 = dataSnapshot.child("min2").getValue().toString();
+                timemins3 = dataSnapshot.child("min3").getValue().toString();
+                timemins4 = dataSnapshot.child("min4").getValue().toString();
+                timemins5 = dataSnapshot.child("min5").getValue().toString();
+
+                timeampm1 = dataSnapshot.child("ampm1").getValue().toString();
+                timeampm2 = dataSnapshot.child("ampm2").getValue().toString();
+                timeampm3 = dataSnapshot.child("ampm3").getValue().toString();
+                timeampm4 = dataSnapshot.child("ampm4").getValue().toString();
+                timeampm5 = dataSnapshot.child("ampm5").getValue().toString();
 
 
-                timeshour1=dataSnapshot.child("hour1").getValue().toString();
-                timeshour2=dataSnapshot.child("hour2").getValue().toString();
-                timeshour3=dataSnapshot.child("hour3").getValue().toString();
-                timeshour4=dataSnapshot.child("hour4").getValue().toString();
-                timeshour5=dataSnapshot.child("hour5").getValue().toString();
-
-                timemins1=dataSnapshot.child("min1").getValue().toString();
-                timemins2=dataSnapshot.child("min2").getValue().toString();
-                timemins3=dataSnapshot.child("min3").getValue().toString();
-                timemins4=dataSnapshot.child("min4").getValue().toString();
-                timemins5=dataSnapshot.child("min5").getValue().toString();
-
-                timeampm1=dataSnapshot.child("ampm1").getValue().toString();
-                timeampm2=dataSnapshot.child("ampm2").getValue().toString();
-                timeampm3=dataSnapshot.child("ampm3").getValue().toString();
-                timeampm4=dataSnapshot.child("ampm4").getValue().toString();
-                timeampm5=dataSnapshot.child("ampm5").getValue().toString();
+                if (timeshour1.length() > 2 ||
+                        timeshour2.length() > 2 ||
+                        timeshour3.length() > 2 ||
+                        timeshour4.length() > 2 ||
+                        timeshour5.length() > 2 ||
+                        timemins1.length() > 2 ||
+                        timemins2.length() > 2 ||
+                        timemins3.length() > 2 ||
+                        timemins4.length() > 2 ||
+                        timemins5.length() > 2 ||
+                        timeampm1.length() > 2 ||
+                        timeampm2.length() > 2 ||
+                        timeampm3.length() > 2 ||
+                        timeampm4.length() > 2 ||
+                        timeampm5.length() > 2) {
 
 
+                    timeshour1 = "00";
+                    timeshour2 = "00";
+                    timeshour3 = "00";
+                    timeshour4 = "00";
+                    timeshour5 = "00";
 
 
-
-
-                if(timeshour1.length()>2||
-                        timeshour2.length()>2||
-                        timeshour3.length()>2||
-                        timeshour4.length()>2||
-                        timeshour5.length()>2||
-                        timemins1.length()>2||
-                        timemins2.length()>2||
-                        timemins3.length()>2||
-                        timemins4.length()>2||
-                        timemins5.length()>2||
-                        timeampm1.length()>2||
-                        timeampm2.length()>2||
-                        timeampm3.length()>2||
-                        timeampm4.length()>2||
-                        timeampm5.length()>2){
-
-
-
-                    timeshour1="00";
-                    timeshour2="00";
-                    timeshour3="00";
-                    timeshour4="00";
-                    timeshour5="00";
-
-
-                    timemins1="00";
-                    timemins2="00";
-                    timemins3="00";
-                    timemins4="00";
-                    timemins5="00";
+                    timemins1 = "00";
+                    timemins2 = "00";
+                    timemins3 = "00";
+                    timemins4 = "00";
+                    timemins5 = "00";
 
 
                 }
 
 
                 ///coursecodeEmpty
-                if(coursecodes5.isEmpty()){
+                if (coursecodes5.isEmpty()) {
 
-                    coursecodes5="Empty";
+                    coursecodes5 = "Empty";
                 }
-                if(coursecodes4.isEmpty()){
+                if (coursecodes4.isEmpty()) {
 
-                    coursecodes4="Empty";
+                    coursecodes4 = "Empty";
                 }
-                if(coursecodes3.isEmpty()){
+                if (coursecodes3.isEmpty()) {
 
-                    coursecodes3="Empty";
+                    coursecodes3 = "Empty";
                 }
-                if(coursecodes2.isEmpty()){
+                if (coursecodes2.isEmpty()) {
 
-                    coursecodes2="Empty";
+                    coursecodes2 = "Empty";
                 }
-                if(coursecodes1.isEmpty()){
+                if (coursecodes1.isEmpty()) {
 
-                    coursecodes1="Empty";
+                    coursecodes1 = "Empty";
                 }
 
                 ///timeshourEmpty
 
-                if(timeshour1.isEmpty()){
+                if (timeshour1.isEmpty()) {
 
-                    timeshour1="00";
+                    timeshour1 = "00";
                 }
-                if(timeshour2.isEmpty()){
+                if (timeshour2.isEmpty()) {
 
-                    timeshour2="00";
+                    timeshour2 = "00";
                 }
-                if(timeshour3.isEmpty()){
+                if (timeshour3.isEmpty()) {
 
-                    timeshour3="00";
+                    timeshour3 = "00";
                 }
-                if(timeshour4.isEmpty()){
+                if (timeshour4.isEmpty()) {
 
-                    timeshour4="00";
+                    timeshour4 = "00";
                 }
-                if(timeshour5.isEmpty()){
+                if (timeshour5.isEmpty()) {
 
-                    timeshour5="00";
+                    timeshour5 = "00";
                 }
 
                 //minEmpty
-                if(timemins1.isEmpty()){
+                if (timemins1.isEmpty()) {
 
-                    timemins1="00";
+                    timemins1 = "00";
                 }
-                if(timemins2.isEmpty()){
+                if (timemins2.isEmpty()) {
 
-                    timemins2="00";
+                    timemins2 = "00";
                 }
-                if(timemins3.isEmpty()){
+                if (timemins3.isEmpty()) {
 
 
-                    timemins3="00";
+                    timemins3 = "00";
                 }
-                if(timemins4.isEmpty()){
+                if (timemins4.isEmpty()) {
 
-                    timemins4="00";
+                    timemins4 = "00";
                 }
-                if(timemins5.length()<1){
+                if (timemins5.length() < 1) {
 
-                    timemins5="00";
+                    timemins5 = "00";
                 }
 
                 //ampmEmpty
 
-                if(timeampm1.isEmpty()){
+                if (timeampm1.isEmpty()) {
 
-                    timeampm1="      ";
+                    timeampm1 = "      ";
                 }
-                if(timeampm2.isEmpty()){
+                if (timeampm2.isEmpty()) {
 
-                    timeampm2="      ";
+                    timeampm2 = "      ";
                 }
-                if(timeampm3.isEmpty()){
+                if (timeampm3.isEmpty()) {
 
-                    timeampm3="      ";
+                    timeampm3 = "      ";
                 }
-                if(timeampm4.isEmpty()){
+                if (timeampm4.isEmpty()) {
 
-                    timeampm4="      ";
+                    timeampm4 = "      ";
                 }
-                if(timeampm5.isEmpty()){
+                if (timeampm5.isEmpty()) {
 
-                    timeampm5="      ";
+                    timeampm5 = "      ";
                 }
 
                 tshowcoursecode1.setText(coursecodes1);
@@ -371,11 +370,11 @@ public class ClassSearchingResult extends AppCompatActivity implements View.OnCl
                 tshowcoursecode5.setText(coursecodes5);
 
 
-                textViewshowtime1.setText(timeshour1+":"+timemins1+"  "+timeampm1);
-                textViewshowtime2.setText(timeshour2+":"+timemins2+"  "+timeampm2);
-                textViewshowtime3.setText(timeshour3+":"+timemins3+"  "+timeampm3);
-                textViewshowtime4.setText(timeshour4+":"+timemins4+"  "+timeampm4);
-                textViewshowtime5.setText(timeshour5+":"+timemins5+"  "+timeampm5);
+                textViewshowtime1.setText(timeshour1 + ":" + timemins1 + "  " + timeampm1);
+                textViewshowtime2.setText(timeshour2 + ":" + timemins2 + "  " + timeampm2);
+                textViewshowtime3.setText(timeshour3 + ":" + timemins3 + "  " + timeampm3);
+                textViewshowtime4.setText(timeshour4 + ":" + timemins4 + "  " + timeampm4);
+                textViewshowtime5.setText(timeshour5 + ":" + timemins5 + "  " + timeampm5);
 
 
                 tshowcoursecode1.setOnClickListener(new View.OnClickListener() {
@@ -383,8 +382,7 @@ public class ClassSearchingResult extends AppCompatActivity implements View.OnCl
                     public void onClick(View v) {
 
 
-
-                        AlertDialog.Builder builder=new AlertDialog.Builder(ClassSearchingResult.this);
+                        AlertDialog.Builder builder = new AlertDialog.Builder(ClassSearchingResult.this);
                         builder.setTitle("Teachers Detail");
                         builder.setIcon(R.drawable.detailes);
                         builder.setMessage("CSE 254>>Java>> Marjan Sir\n" +
@@ -417,14 +415,12 @@ public class ClassSearchingResult extends AppCompatActivity implements View.OnCl
                 });
 
 
-
                 tshowcoursecode2.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
 
 
-
-                        AlertDialog.Builder builder=new AlertDialog.Builder(ClassSearchingResult.this);
+                        AlertDialog.Builder builder = new AlertDialog.Builder(ClassSearchingResult.this);
                         builder.setTitle("Teachers Detail");
                         builder.setIcon(R.drawable.detailes);
                         builder.setMessage("CSE 254>>Java>> Marjan Sir\n" +
@@ -462,8 +458,7 @@ public class ClassSearchingResult extends AppCompatActivity implements View.OnCl
                     public void onClick(View v) {
 
 
-
-                        AlertDialog.Builder builder=new AlertDialog.Builder(ClassSearchingResult.this);
+                        AlertDialog.Builder builder = new AlertDialog.Builder(ClassSearchingResult.this);
                         builder.setTitle("Teachers Detail");
                         builder.setIcon(R.drawable.detailes);
                         builder.setMessage("CSE 254>>Java>> Marjan Sir\n" +
@@ -501,8 +496,7 @@ public class ClassSearchingResult extends AppCompatActivity implements View.OnCl
                     public void onClick(View v) {
 
 
-
-                        AlertDialog.Builder builder=new AlertDialog.Builder(ClassSearchingResult.this);
+                        AlertDialog.Builder builder = new AlertDialog.Builder(ClassSearchingResult.this);
                         builder.setTitle("Teachers Detail");
                         builder.setIcon(R.drawable.detailes);
                         builder.setMessage("CSE 254>>Java>> Marjan Sir\n" +
@@ -540,8 +534,7 @@ public class ClassSearchingResult extends AppCompatActivity implements View.OnCl
                     public void onClick(View v) {
 
 
-
-                        AlertDialog.Builder builder=new AlertDialog.Builder(ClassSearchingResult.this);
+                        AlertDialog.Builder builder = new AlertDialog.Builder(ClassSearchingResult.this);
                         builder.setTitle("Teachers Detail");
                         builder.setIcon(R.drawable.detailes);
                         builder.setMessage("CSE 254>>Java>> Marjan Sir\n" +
@@ -575,8 +568,7 @@ public class ClassSearchingResult extends AppCompatActivity implements View.OnCl
                 });
 
 
-
-
+            }
 
 
             }
@@ -590,7 +582,7 @@ public class ClassSearchingResult extends AppCompatActivity implements View.OnCl
 
 
 
-        databaseReference1.addValueEventListener(new ValueEventListener() {
+/*        databaseReference1.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
@@ -604,8 +596,9 @@ public class ClassSearchingResult extends AppCompatActivity implements View.OnCl
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
             }
-        });
+        });*/
 
+/*
         databaseReference2.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -622,6 +615,7 @@ public class ClassSearchingResult extends AppCompatActivity implements View.OnCl
 
             }
         });
+*/
 
 
 
@@ -817,7 +811,7 @@ public class ClassSearchingResult extends AppCompatActivity implements View.OnCl
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
         if(item.getItemId()==R.id.backId){
-            Intent intent=new Intent(ClassSearchingResult.this,new_app_menu.class);
+            Intent intent=new Intent(ClassSearchingResult.this,ArchiveClass.class);
             startActivity(intent);
 
             /*finish();*/
@@ -829,7 +823,7 @@ public class ClassSearchingResult extends AppCompatActivity implements View.OnCl
     @Override
     public void onBackPressed(){
 
-        Intent intent=new Intent(ClassSearchingResult.this,new_app_menu.class);
+        Intent intent=new Intent(ClassSearchingResult.this,ArchiveClass.class);
         startActivity(intent);
         /*finish();*/
 
