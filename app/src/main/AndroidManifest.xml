@@ -12,7 +12,7 @@
     <uses-permission android:name="android.permission.INSTALL_SHORTCUT" />
     <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -23,6 +23,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".ClassSearchingResult"
+            android:exported="true"
+
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".ArchiveClass"
+            android:exported="true" />
+        <activity
             android:name=".new_app_menu"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
@@ -31,31 +39,32 @@
         <activity
             android:name=".busschedulepdf"
             android:label="Bus Schedule"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".addnewuser"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".roomnumber"
-            android:theme="@style/AppTheme.NoActionBar"/>
-
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".addnewuser"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".roomnumber"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".facebook_group"
             android:label="Facebook Group"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".sendNotificationByfirebase"
             android:label="Notification Server"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".AboutThisApplication"
             android:label="About Applications"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".developer"
             android:label="Developer"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".notice_display_activity"
             android:label="Notice Board"
@@ -65,12 +74,12 @@
             android:name=".adminactivity"
             android:label="Setting"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".addclasstimeactivity"
             android:label="Add Class Schedule"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".settimeactivity"
             android:label="Admin Login"
@@ -80,7 +89,7 @@
             android:name=".curriculamactivity"
             android:label="Curriculam"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".cse18activity"
             android:label="CSE18&apos;s Members"
@@ -93,12 +102,12 @@
             android:name=".noticeactivity"
             android:label="Add Notice"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".classactivity"
             android:label="Today&apos;s Class Schedule"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait"

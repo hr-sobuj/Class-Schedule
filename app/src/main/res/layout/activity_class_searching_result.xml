@@ -4,11 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:orientation="vertical"
-
-    tools:context=".classactivity">
-
+    tools:context=".ClassSearchingResult">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -37,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="Today's Class Schedule"
+            android:text="Class Schedule"
             android:textSize="30sp"
             android:padding="2dp"
             android:textColor="@color/colorPrimary"
@@ -51,52 +48,52 @@
 
         </View>
 
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-                <LinearLayout android:layout_height="match_parent"
-                    android:layout_width="match_parent">
+            <LinearLayout android:layout_height="match_parent"
+                android:layout_width="match_parent">
 
-                    <TextView android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Date : "
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/colorPrimary"/>
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date : "
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"/>
 
-                    <TextView
-                        android:id="@+id/classsdate"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:textColor="#D318B2"/>
+                <TextView
+                    android:id="@+id/classsdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="#D318B2"/>
 
-                </LinearLayout>
+            </LinearLayout>
 
-                <TableRow android:weightSum="2">
+            <TableRow android:weightSum="2" android:visibility="gone">
 
-                    <TextView android:layout_width="match_parent"
-                        android:layout_weight="0"
-                        android:layout_height="wrap_content"
-                        android:text="Class Room : "
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/colorPrimary"/>
+                <TextView android:layout_width="match_parent"
+                    android:layout_weight="0"
+                    android:layout_height="wrap_content"
+                    android:text="Class Room : "
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"/>
 
-                    <TextView
-                        android:id="@+id/classsroom"
-                        android:layout_width="match_parent"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:textColor="#D50000"/>
+                <TextView
+                    android:id="@+id/classsroom"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#D50000"/>
 
-                </TableRow>
+            </TableRow>
 
 
-            </TableLayout>
+        </TableLayout>
 
     </LinearLayout>
 
@@ -110,12 +107,13 @@
         android:layout_width="match_parent"
         android:layout_height="291dp"
         android:layout_gravity="center"
+        android:gravity="center"
         android:layout_margin="10dp">
 
         <TableRow
             android:layout_gravity="center"
             android:gravity="center"
-            android:weightSum="3">
+            android:weightSum="2">
 
             <TextView
                 android:layout_width="match_parent"
@@ -148,12 +146,14 @@
                 android:text="Set Alarm"
                 android:textColor="@color/colorPrimary"
                 android:textSize="15sp"
-                android:textStyle="bold" />
+                android:visibility="gone"
+                android:textStyle="bold"
+                />
 
 
         </TableRow>
 
-        <TableRow android:weightSum="3">
+        <TableRow android:weightSum="2">
 
             <TextView
                 android:id="@+id/showcoursecode1"
@@ -185,7 +185,7 @@
 
             <Button
                 android:id="@+id/showalarmid1"
-
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -199,7 +199,7 @@
 
         </TableRow>
 
-        <TableRow android:weightSum="3">
+        <TableRow android:weightSum="2">
 
             <TextView
                 android:id="@+id/showcoursecode2"
@@ -232,7 +232,7 @@
 
 
             <Button
-
+                android:visibility="gone"
                 android:id="@+id/showalarmid2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -247,7 +247,7 @@
 
         </TableRow>
 
-        <TableRow android:weightSum="3">
+        <TableRow android:weightSum="2">
 
             <TextView
                 android:id="@+id/showcoursecode3"
@@ -280,7 +280,7 @@
 
 
             <Button
-
+                android:visibility="gone"
                 android:id="@+id/showalarmid3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -295,7 +295,7 @@
 
         </TableRow>
 
-        <TableRow android:weightSum="3">
+        <TableRow android:weightSum="2">
 
             <TextView
                 android:id="@+id/showcoursecode4"
@@ -328,7 +328,7 @@
                 android:textSize="15sp" />
 
             <Button
-
+                android:visibility="gone"
                 android:id="@+id/showalarmid4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -343,7 +343,7 @@
 
         </TableRow>
 
-        <TableRow android:weightSum="3">
+        <TableRow android:weightSum="2">
 
             <TextView
                 android:id="@+id/showcoursecode5"
@@ -377,7 +377,7 @@
 
 
             <Button
-
+                android:visibility="gone"
                 android:id="@+id/showalarmid5"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -400,36 +400,37 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center">
-    <Button
-        android:id="@+id/classtimebackid"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text=" Back"
-        android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
-        android:textAllCaps="false"
-        android:background="@drawable/submitbordar"
-        android:textSize="20sp"
-        android:textColor="#fff"
-        android:layout_margin="10dp"
-        android:paddingStart="15dp"
-        android:paddingEnd="20dp"
-        />
+        <Button
+            android:id="@+id/classtimebackid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text=" Back"
+            android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
+            android:textAllCaps="false"
+            android:background="@drawable/submitbordar"
+            android:textSize="20sp"
+            android:textColor="#fff"
+            android:layout_margin="10dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="20dp"
+            />
 
-    <Button
-        android:id="@+id/archiveclass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Archive Class"
+        <Button
+            android:id="@+id/archiveclass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Archive Class"
 
-        android:textAllCaps="false"
-        android:background="@drawable/submitbordar"
-        android:textSize="20sp"
-        android:textColor="#fff"
-        android:paddingStart="30dp"
-        android:paddingEnd="30dp"
-        />
+            android:textAllCaps="false"
+            android:background="@drawable/submitbordar"
+            android:textSize="20sp"
+            android:textColor="#fff"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:visibility="gone"
+            />
     </LinearLayout>
 
 </LinearLayout>

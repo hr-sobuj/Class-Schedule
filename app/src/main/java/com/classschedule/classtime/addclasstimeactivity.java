@@ -63,7 +63,7 @@ public class addclasstimeactivity extends AppCompatActivity implements View.OnCl
             et4,em4,ea4,
             et5,em5,ea5;
 
-    DatabaseReference databaseReference;
+    DatabaseReference databaseReference,databaseReferenceForTotalClass;
 
     private Button btncourse1,btncourse2,btncourse3,btncourse4,btncourse5,btnclasssubmitids;
 
@@ -190,7 +190,8 @@ public class addclasstimeactivity extends AppCompatActivity implements View.OnCl
 
 
 
-        databaseReference=databaseReference= FirebaseDatabase.getInstance().getReference("Class Time");
+        databaseReference= FirebaseDatabase.getInstance().getReference("Class Time");
+        databaseReferenceForTotalClass= FirebaseDatabase.getInstance().getReference("Total Class");
 
 
 
@@ -236,6 +237,10 @@ public class addclasstimeactivity extends AppCompatActivity implements View.OnCl
                     String key="Today's Class Time";
                     ClassTime_handler classTime_handler_handler=new ClassTime_handler(c1,t1,m1,a1, c2,t2,m2,a2, c3,t3,m3,a3, c4,t4,m4,a4, c5,t5,m5,a5);
                     databaseReference.child(key).setValue(classTime_handler_handler);
+                    String[] keyTotalClass=dateids1.split("/");
+                    String keyTotal=keyTotalClass[0]+keyTotalClass[1]+keyTotalClass[2];
+//                    Log.e("totalclass", keyTotal);
+                    databaseReferenceForTotalClass.child(keyTotal).setValue(classTime_handler_handler);
                     if(isOnline()){
                         Intent intent=new Intent(addclasstimeactivity.this,adminactivity.class);
                         startActivity(intent);

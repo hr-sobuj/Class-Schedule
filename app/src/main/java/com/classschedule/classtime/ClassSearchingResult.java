@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -19,6 +18,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Process;
 import android.provider.AlarmClock;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -35,9 +35,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.util.Calendar;
-
-public class classactivity extends AppCompatActivity implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener {
+public class ClassSearchingResult extends AppCompatActivity implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener {
 
     private Button btnclasstimeback,btnarchive;
     private DrawerLayout mNavDrawer;
@@ -63,25 +61,32 @@ public class classactivity extends AppCompatActivity implements View.OnClickList
 
     private String todayclassroom,todayclassdate;
 
-
-
+    String searchkey,searchdate;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.nav_classactivity);
+        setContentView(R.layout.nav_class_searching_result);
 
 
-btnarchive=findViewById(R.id.archiveclass);
-btnarchive.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        Intent intent=new Intent(classactivity.this,ArchiveClass.class);
-        startActivity(intent);
-    }
-});
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            searchkey = extras.getString("key");
+            searchdate = extras.getString("date");
+            Log.e("key",searchdate);
+            //The key argument here must match that used in the other activity
+        }
 
+        /*btnarchive=findViewById(R.id.archiveclass);
+        btnarchive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(ClassSearching.this,ArchiveClass.class);
+                startActivity(intent);
+            }
+        });
+*/
 
 
 
@@ -102,9 +107,9 @@ btnarchive.setOnClickListener(new View.OnClickListener() {
         navigationView.setNavigationItemSelectedListener(this);
 
 
-        databaseReference= FirebaseDatabase.getInstance().getReference().child("Class Time").child("Today's Class Time");
-        databaseReference1= FirebaseDatabase.getInstance().getReference().child("Class Time").child("Class Date");
-        databaseReference2= FirebaseDatabase.getInstance().getReference().child("Class Room Number").child("Class Room Number");
+        databaseReference= FirebaseDatabase.getInstance().getReference().child("Total Class").child(searchkey);
+//        databaseReference1= FirebaseDatabase.getInstance().getReference().child("Class Time").child("Class Date");
+//        databaseReference2= FirebaseDatabase.getInstance().getReference().child("Class Room Number").child("Class Room Number");
 
 
 
@@ -120,7 +125,7 @@ btnarchive.setOnClickListener(new View.OnClickListener() {
         }
         else {
 
-            Toast.makeText(classactivity.this,"Please Check Your Internet Connection and try again.Now You see it offline.",Toast.LENGTH_LONG).show();
+            Toast.makeText(ClassSearchingResult.this,"Please Check Your Internet Connection and try again.Now You see it offline.",Toast.LENGTH_LONG).show();
         }
 
 
@@ -133,7 +138,7 @@ btnarchive.setOnClickListener(new View.OnClickListener() {
         btnclasstimeback=(Button) findViewById(R.id.classtimebackid);
 
 
-        btnshowalarm1=(Button) findViewById(R.id.showalarmid1);
+       /* btnshowalarm1=(Button) findViewById(R.id.showalarmid1);
         btnshowalarm2=(Button) findViewById(R.id.showalarmid2);
         btnshowalarm3=(Button) findViewById(R.id.showalarmid3);
         btnshowalarm4=(Button) findViewById(R.id.showalarmid4);
@@ -143,7 +148,7 @@ btnarchive.setOnClickListener(new View.OnClickListener() {
         btnshowalarm2.setOnClickListener(this);
         btnshowalarm3.setOnClickListener(this);
         btnshowalarm4.setOnClickListener(this);
-        btnshowalarm5.setOnClickListener(this);
+        btnshowalarm5.setOnClickListener(this);*/
 
 
         textViewshowtime1=(TextView) findViewById(R.id.showtimeid1);
@@ -171,7 +176,7 @@ btnarchive.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent intent=new Intent(classactivity.this,new_app_menu.class);
+                Intent intent=new Intent(ClassSearchingResult.this,new_app_menu.class);
                 startActivity(intent);
                 /*finish();
                 finishAffinity();*/
@@ -192,8 +197,6 @@ btnarchive.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onDataChange(@NonNull final DataSnapshot dataSnapshot) {
 
-
-
                 progressDialog.dismiss();
 
                 if(!isOnline()){
@@ -205,11 +208,11 @@ btnarchive.setOnClickListener(new View.OnClickListener() {
 
 
 
-               coursecodes1=dataSnapshot.child("coursecodes1").getValue().toString();
-               coursecodes2=dataSnapshot.child("coursecodes2").getValue().toString();
-               coursecodes3=dataSnapshot.child("coursecodes3").getValue().toString();
-               coursecodes4=dataSnapshot.child("coursecodes4").getValue().toString();
-               coursecodes5=dataSnapshot.child("coursecodes5").getValue().toString();
+                coursecodes1=dataSnapshot.child("coursecodes1").getValue().toString();
+                coursecodes2=dataSnapshot.child("coursecodes2").getValue().toString();
+                coursecodes3=dataSnapshot.child("coursecodes3").getValue().toString();
+                coursecodes4=dataSnapshot.child("coursecodes4").getValue().toString();
+                coursecodes5=dataSnapshot.child("coursecodes5").getValue().toString();
 
 
                 timeshour1=dataSnapshot.child("hour1").getValue().toString();
@@ -260,11 +263,11 @@ btnarchive.setOnClickListener(new View.OnClickListener() {
                     timeshour5="00";
 
 
-                   timemins1="00";
-                   timemins2="00";
-                   timemins3="00";
-                   timemins4="00";
-                   timemins5="00";
+                    timemins1="00";
+                    timemins2="00";
+                    timemins3="00";
+                    timemins4="00";
+                    timemins5="00";
 
 
                 }
@@ -381,34 +384,34 @@ btnarchive.setOnClickListener(new View.OnClickListener() {
 
 
 
-                            AlertDialog.Builder builder=new AlertDialog.Builder(classactivity.this);
-                            builder.setTitle("Teachers Detail");
-                            builder.setIcon(R.drawable.detailes);
-                            builder.setMessage("CSE 254>>Java>> Marjan Sir\n" +
-                                    "-----------------------------------------\n" +
-                                    "CSE 255 & CSE 256>>Algorithm>>Masud Sir\n" +
-                                    "-----------------------------------------\n" +
-                                    "CSE 257 & CSE 258>>Computation>>Hashi Mam\n" +
-                                    "-----------------------------------------\n" +
-                                    "CSE 259>>Computer Architecture>>Arshad Sir\n" +
-                                    "-----------------------------------------\n" +
-                                    "ECE 259 & ECE 260>>Digital Electronics>>Abubakar Sir\n" +
-                                    "-----------------------------------------\n" +
-                                    "ACT 205>>Accounting>>Mamun Sir\n" +
-                                    "-----------------------------------------\n" +
-                                    "CSE 252>>Application Development\n");
+                        AlertDialog.Builder builder=new AlertDialog.Builder(ClassSearchingResult.this);
+                        builder.setTitle("Teachers Detail");
+                        builder.setIcon(R.drawable.detailes);
+                        builder.setMessage("CSE 254>>Java>> Marjan Sir\n" +
+                                "-----------------------------------------\n" +
+                                "CSE 255 & CSE 256>>Algorithm>>Masud Sir\n" +
+                                "-----------------------------------------\n" +
+                                "CSE 257 & CSE 258>>Computation>>Hashi Mam\n" +
+                                "-----------------------------------------\n" +
+                                "CSE 259>>Computer Architecture>>Arshad Sir\n" +
+                                "-----------------------------------------\n" +
+                                "ECE 259 & ECE 260>>Digital Electronics>>Abubakar Sir\n" +
+                                "-----------------------------------------\n" +
+                                "ACT 205>>Accounting>>Mamun Sir\n" +
+                                "-----------------------------------------\n" +
+                                "CSE 252>>Application Development\n");
 
-                            builder.setNegativeButton("Dismiss", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    //apphome.super.onBackPressed();
-                                    dialog.cancel();
-                                }
-                            });
-                            builder.show();
+                        builder.setNegativeButton("Dismiss", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                //apphome.super.onBackPressed();
+                                dialog.cancel();
+                            }
+                        });
+                        builder.show();
 
 
-                        }
+                    }
 
 
                 });
@@ -421,7 +424,7 @@ btnarchive.setOnClickListener(new View.OnClickListener() {
 
 
 
-                        AlertDialog.Builder builder=new AlertDialog.Builder(classactivity.this);
+                        AlertDialog.Builder builder=new AlertDialog.Builder(ClassSearchingResult.this);
                         builder.setTitle("Teachers Detail");
                         builder.setIcon(R.drawable.detailes);
                         builder.setMessage("CSE 254>>Java>> Marjan Sir\n" +
@@ -460,7 +463,7 @@ btnarchive.setOnClickListener(new View.OnClickListener() {
 
 
 
-                        AlertDialog.Builder builder=new AlertDialog.Builder(classactivity.this);
+                        AlertDialog.Builder builder=new AlertDialog.Builder(ClassSearchingResult.this);
                         builder.setTitle("Teachers Detail");
                         builder.setIcon(R.drawable.detailes);
                         builder.setMessage("CSE 254>>Java>> Marjan Sir\n" +
@@ -499,7 +502,7 @@ btnarchive.setOnClickListener(new View.OnClickListener() {
 
 
 
-                        AlertDialog.Builder builder=new AlertDialog.Builder(classactivity.this);
+                        AlertDialog.Builder builder=new AlertDialog.Builder(ClassSearchingResult.this);
                         builder.setTitle("Teachers Detail");
                         builder.setIcon(R.drawable.detailes);
                         builder.setMessage("CSE 254>>Java>> Marjan Sir\n" +
@@ -538,7 +541,7 @@ btnarchive.setOnClickListener(new View.OnClickListener() {
 
 
 
-                        AlertDialog.Builder builder=new AlertDialog.Builder(classactivity.this);
+                        AlertDialog.Builder builder=new AlertDialog.Builder(ClassSearchingResult.this);
                         builder.setTitle("Teachers Detail");
                         builder.setIcon(R.drawable.detailes);
                         builder.setMessage("CSE 254>>Java>> Marjan Sir\n" +
@@ -645,7 +648,7 @@ btnarchive.setOnClickListener(new View.OnClickListener() {
                 }
                 else {
 
-                    Toast.makeText(classactivity.this,"Data not found!",Toast.LENGTH_LONG).show();
+                    Toast.makeText(ClassSearchingResult.this,"Data not found!",Toast.LENGTH_LONG).show();
                 }
 
 
@@ -653,7 +656,7 @@ btnarchive.setOnClickListener(new View.OnClickListener() {
             }
             else {
 
-                Toast.makeText(classactivity.this,"Please turn on your internet connection!",Toast.LENGTH_LONG).show();
+                Toast.makeText(ClassSearchingResult.this,"Please turn on your internet connection!",Toast.LENGTH_LONG).show();
             }
 
 
@@ -669,7 +672,7 @@ btnarchive.setOnClickListener(new View.OnClickListener() {
                 startActivity(intent);
             }
             else {
-                Toast.makeText(classactivity.this,"Class Schedule Is Empty",Toast.LENGTH_LONG).show();
+                Toast.makeText(ClassSearching.this,"Class Schedule Is Empty",Toast.LENGTH_LONG).show();
             }
 
 */
@@ -688,7 +691,7 @@ btnarchive.setOnClickListener(new View.OnClickListener() {
                 }
                 else {
 
-                    Toast.makeText(classactivity.this,"Data not found!",Toast.LENGTH_LONG).show();
+                    Toast.makeText(ClassSearchingResult.this,"Data not found!",Toast.LENGTH_LONG).show();
                 }
 
 
@@ -696,7 +699,7 @@ btnarchive.setOnClickListener(new View.OnClickListener() {
             }
             else {
 
-                Toast.makeText(classactivity.this,"Please turn on your internet connection!",Toast.LENGTH_LONG).show();
+                Toast.makeText(ClassSearchingResult.this,"Please turn on your internet connection!",Toast.LENGTH_LONG).show();
             }
 
         }
@@ -713,7 +716,7 @@ btnarchive.setOnClickListener(new View.OnClickListener() {
                 }
                 else {
 
-                    Toast.makeText(classactivity.this,"Data not found!",Toast.LENGTH_LONG).show();
+                    Toast.makeText(ClassSearchingResult.this,"Data not found!",Toast.LENGTH_LONG).show();
                 }
 
 
@@ -721,7 +724,7 @@ btnarchive.setOnClickListener(new View.OnClickListener() {
             }
             else {
 
-                Toast.makeText(classactivity.this,"Please turn on your internet connection!",Toast.LENGTH_LONG).show();
+                Toast.makeText(ClassSearchingResult.this,"Please turn on your internet connection!",Toast.LENGTH_LONG).show();
             }
 
         }
@@ -738,7 +741,7 @@ btnarchive.setOnClickListener(new View.OnClickListener() {
                 }
                 else {
 
-                    Toast.makeText(classactivity.this,"Data not found!",Toast.LENGTH_LONG).show();
+                    Toast.makeText(ClassSearchingResult.this,"Data not found!",Toast.LENGTH_LONG).show();
                 }
 
 
@@ -746,7 +749,7 @@ btnarchive.setOnClickListener(new View.OnClickListener() {
             }
             else {
 
-                Toast.makeText(classactivity.this,"Please turn on your internet connection!",Toast.LENGTH_LONG).show();
+                Toast.makeText(ClassSearchingResult.this,"Please turn on your internet connection!",Toast.LENGTH_LONG).show();
             }
 
         }
@@ -763,7 +766,7 @@ btnarchive.setOnClickListener(new View.OnClickListener() {
                 }
                 else {
 
-                    Toast.makeText(classactivity.this,"Data not found!",Toast.LENGTH_LONG).show();
+                    Toast.makeText(ClassSearchingResult.this,"Data not found!",Toast.LENGTH_LONG).show();
                 }
 
 
@@ -771,7 +774,7 @@ btnarchive.setOnClickListener(new View.OnClickListener() {
             }
             else {
 
-                Toast.makeText(classactivity.this,"Please turn on your internet connection!",Toast.LENGTH_LONG).show();
+                Toast.makeText(ClassSearchingResult.this,"Please turn on your internet connection!",Toast.LENGTH_LONG).show();
             }
 
 
@@ -792,10 +795,10 @@ btnarchive.setOnClickListener(new View.OnClickListener() {
             if(m>=0&&m<=60){
 
                 startActivity(intent);
-        }
+            }
         }
         else {
-            Toast.makeText(classactivity.this,"Class Schedule is Empty!",Toast.LENGTH_LONG).show();
+            Toast.makeText(ClassSearchingResult.this,"Class Schedule is Empty!",Toast.LENGTH_LONG).show();
         }
 
 
@@ -814,7 +817,7 @@ btnarchive.setOnClickListener(new View.OnClickListener() {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
         if(item.getItemId()==R.id.backId){
-            Intent intent=new Intent(classactivity.this,new_app_menu.class);
+            Intent intent=new Intent(ClassSearchingResult.this,new_app_menu.class);
             startActivity(intent);
 
             /*finish();*/
@@ -826,7 +829,7 @@ btnarchive.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onBackPressed(){
 
-        Intent intent=new Intent(classactivity.this,new_app_menu.class);
+        Intent intent=new Intent(ClassSearchingResult.this,new_app_menu.class);
         startActivity(intent);
         /*finish();*/
 
@@ -851,7 +854,7 @@ btnarchive.setOnClickListener(new View.OnClickListener() {
 
 
 
-                Intent intent=new Intent(classactivity.this,new_app_menu.class);
+                Intent intent=new Intent(ClassSearchingResult.this,new_app_menu.class);
                 startActivity(intent);
 
                 mNavDrawer.closeDrawer(GravityCompat.START);
@@ -860,7 +863,7 @@ btnarchive.setOnClickListener(new View.OnClickListener() {
             case R.id.nvtodayclassschedules:
 
 
-                Intent intent1=new Intent(classactivity.this,classactivity.class);
+                Intent intent1=new Intent(ClassSearchingResult.this, ClassSearchingResult.class);
                 startActivity(intent1);
 
                 finish();
@@ -872,7 +875,7 @@ btnarchive.setOnClickListener(new View.OnClickListener() {
 
 
 
-                Intent intent2=new Intent(classactivity.this,notice_display_activity.class);
+                Intent intent2=new Intent(ClassSearchingResult.this,notice_display_activity.class);
                 startActivity(intent2);
                 mNavDrawer.closeDrawer(GravityCompat.START);
                 finish();
@@ -880,7 +883,7 @@ btnarchive.setOnClickListener(new View.OnClickListener() {
                 break;
 
             case R.id.nvcurriculamid:
-                Intent intent3=new Intent(classactivity.this,curriculamactivity.class);
+                Intent intent3=new Intent(ClassSearchingResult.this,curriculamactivity.class);
                 startActivity(intent3);
                 mNavDrawer.closeDrawer(GravityCompat.START);
 
@@ -888,14 +891,14 @@ btnarchive.setOnClickListener(new View.OnClickListener() {
                 break;
 
             case R.id.nvbusscheduleid:
-                Intent intent4=new Intent(classactivity.this,busschedulepdf.class);
+                Intent intent4=new Intent(ClassSearchingResult.this,busschedulepdf.class);
                 startActivity(intent4);
                 mNavDrawer.closeDrawer(GravityCompat.START);
                 finish();
                 break;
 
             case R.id.nvfacebookgrpid:
-                Intent intent5=new Intent(classactivity.this,facebook_group.class);
+                Intent intent5=new Intent(ClassSearchingResult.this,facebook_group.class);
                 startActivity(intent5);
                 mNavDrawer.closeDrawer(GravityCompat.START);
                 finish();
@@ -904,7 +907,7 @@ btnarchive.setOnClickListener(new View.OnClickListener() {
             case R.id.nvsettimeid:
 
 
-                Intent intent6=new Intent(classactivity.this,settimeactivity.class);
+                Intent intent6=new Intent(ClassSearchingResult.this,settimeactivity.class);
                 startActivity(intent6);
 
                 finish();
@@ -935,7 +938,7 @@ btnarchive.setOnClickListener(new View.OnClickListener() {
                 finish();
                 break;
             case R.id.nvdeveloperid:
-                Intent intent9=new Intent(classactivity.this,developer.class);
+                Intent intent9=new Intent(ClassSearchingResult.this,developer.class);
                 startActivity(intent9);
                 mNavDrawer.closeDrawer(GravityCompat.START);
                 finish();
@@ -948,11 +951,11 @@ btnarchive.setOnClickListener(new View.OnClickListener() {
 
                 try{
 
-                    Intent intent10=new Intent(classactivity.this,AboutThisApplication.class);
+                    Intent intent10=new Intent(ClassSearchingResult.this,AboutThisApplication.class);
                     startActivity(intent10);
 
                 }catch (Exception e){
-                    Toast.makeText(classactivity.this,"Exception"+e,Toast.LENGTH_LONG).show();
+                    Toast.makeText(ClassSearchingResult.this,"Exception"+e,Toast.LENGTH_LONG).show();
                 }
 
                 mNavDrawer.closeDrawer(GravityCompat.START);

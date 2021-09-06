@@ -3,10 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Academic Project/L2 S2/ClassTime/app/src/main/res/drawable/submit_rgb.xml" value="0.24871794871794872" />
+        <entry key="..\:/Academic Project/L2 S2/ClassTime/app/src/main/res/drawable/submitbordar.xml" value="0.24871794871794872" />
         <entry key="..\:/Academic Project/L2 S2/ClassTime/app/src/main/res/layout/activity_addclasstimeactivity.xml" value="0.115625" />
+        <entry key="..\:/Academic Project/L2 S2/ClassTime/app/src/main/res/layout/activity_addnewuser.xml" value="0.23645833333333333" />
+        <entry key="..\:/Academic Project/L2 S2/ClassTime/app/src/main/res/layout/activity_archive_class.xml" value="0.23645833333333333" />
         <entry key="..\:/Academic Project/L2 S2/ClassTime/app/src/main/res/layout/activity_bus_schedulepdf.xml" value="0.13020833333333334" />
+        <entry key="..\:/Academic Project/L2 S2/ClassTime/app/src/main/res/layout/activity_class_searching.xml" value="0.1" />
+        <entry key="..\:/Academic Project/L2 S2/ClassTime/app/src/main/res/layout/activity_classactivity.xml" value="0.1484375" />
         <entry key="..\:/Academic Project/L2 S2/ClassTime/app/src/main/res/layout/activity_curriculamactivity.xml" value="0.13020833333333334" />
         <entry key="..\:/Academic Project/L2 S2/ClassTime/app/src/main/res/layout/activity_noticeactivity.xml" value="0.23645833333333333" />
+        <entry key="..\:/Academic Project/L2 S2/ClassTime/app/src/main/res/layout/nav_class_searching.xml" value="0.11197916666666667" />
+        <entry key="..\:/Academic Project/L2 S2/ClassTime/app/src/main/res/layout/nav_facebook.xml" value="0.23645833333333333" />
+        <entry key="..\:/Academic Project/L2 S2/ClassTime/app/src/main/res/layout/nav_notice_display_activity.xml" value="0.11197916666666667" />
+        <entry key="..\:/Academic Project/L2 S2/ClassTime/app/src/main/res/layout/nav_roomnumber.xml" value="0.11197916666666667" />
+        <entry key="..\:/Academic Project/L2 S2/ClassTime/app/src/main/res/layout/nav_sendnotification.xml" value="0.11197916666666667" />
       </map>
     </option>
   </component>
