@@ -17,6 +17,7 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Process;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -31,6 +32,9 @@ import android.widget.Toast;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class noticeactivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     private EditText editTextTitle,editTextnoticeMessage,editTextnoticeDate;
@@ -98,7 +102,9 @@ public class noticeactivity extends AppCompatActivity implements NavigationView.
                   noticeVal=radioButtonVal.getText().toString();
 
 
-                  dateVal=editTextnoticeDate.getText().toString();
+                  dateVal=new SimpleDateFormat("dd-MM-yyyy").format(new Date());
+                  Log.e("date",dateVal);
+//                  dateVal=editTextnoticeDate.getText().toString();
                   titleVal=editTextTitle.getText().toString();
                   messageVal=editTextnoticeMessage.getText().toString();
 

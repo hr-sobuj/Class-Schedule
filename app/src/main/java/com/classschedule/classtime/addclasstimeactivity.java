@@ -9,6 +9,7 @@ import androidx.core.app.NotificationCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.app.DatePickerDialog;
 import android.app.Notification;
 import android.app.TimePickerDialog;
 import android.content.BroadcastReceiver;
@@ -28,6 +29,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -39,6 +41,10 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.messaging.FirebaseMessaging;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
 
 public class addclasstimeactivity extends AppCompatActivity implements View.OnClickListener , NavigationView.OnNavigationItemSelectedListener{
 
@@ -80,7 +86,50 @@ public class addclasstimeactivity extends AppCompatActivity implements View.OnCl
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.nav_addclasstimeactivity);
+        
+        ///date picker
 
+        final Calendar myCalendar = Calendar.getInstance();
+
+        EditText datepicker_edittext= (EditText) findViewById(R.id.datepicker);
+        DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
+
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthOfYear,
+                                  int dayOfMonth) {
+                // TODO Auto-generated method stub
+                myCalendar.set(Calendar.YEAR, year);
+                myCalendar.set(Calendar.MONTH, monthOfYear);
+                myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+                String myFormat = "dd/MM/yy"; //In which you need put here
+                SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
+
+                datepicker_edittext.setText(sdf.format(myCalendar.getTime()));
+            }
+
+        };
+
+        datepicker_edittext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new DatePickerDialog(addclasstimeactivity.this, date, myCalendar
+                        .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
+                        myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+            }
+        });
+  /*      edittext.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                new DatePickerDialog(addclasstimeactivity.this, date, myCalendar
+                        .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
+                        myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+            }
+        });*/
+//        private void updateLabel() {
+//
+//        }
 
 
         Toolbar toolbar=findViewById(R.id.toolbar);
@@ -176,7 +225,7 @@ public class addclasstimeactivity extends AppCompatActivity implements View.OnCl
                 a5=ea5.getText().toString();
 
 
-                dateids1=editTextdateid.getText().toString();
+                dateids1=datepicker_edittext.getText().toString();
 
                 if(dateids1.length()>0){
 

@@ -114,13 +114,15 @@
             android:textColor="@color/colorPrimary"
             android:textSize="20sp"
             android:textStyle="bold"
+            android:visibility="gone"
             />
         <EditText
             android:id="@+id/noticedateid"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="DD-MM-YY"
-            android:padding="10dp"/>
+            android:padding="10dp"
+            android:visibility="gone"/>
 
     </LinearLayout>
 
