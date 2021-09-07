@@ -122,6 +122,16 @@ public class ArchiveClass extends AppCompatActivity implements NavigationView.On
 //else{
 //    Toast.makeText(ArchiveClass.this,"Please Select a date",Toast.LENGTH_LONG).show();
 //}
+
+
+        btntotalclass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(ArchiveClass.this,TotalClass.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
         @Override

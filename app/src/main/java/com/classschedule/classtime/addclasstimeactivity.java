@@ -44,6 +44,7 @@ import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Locale;
 
 public class addclasstimeactivity extends AppCompatActivity implements View.OnClickListener , NavigationView.OnNavigationItemSelectedListener{
@@ -235,10 +236,12 @@ public class addclasstimeactivity extends AppCompatActivity implements View.OnCl
                     String key1="Class Date";
 
                     String key="Today's Class Time";
-                    ClassTime_handler classTime_handler_handler=new ClassTime_handler(c1,t1,m1,a1, c2,t2,m2,a2, c3,t3,m3,a3, c4,t4,m4,a4, c5,t5,m5,a5);
-                    databaseReference.child(key).setValue(classTime_handler_handler);
                     String[] keyTotalClass=dateids1.split("/");
                     String keyTotal=keyTotalClass[0]+keyTotalClass[1]+keyTotalClass[2];
+                    ClassTime_handler classTime_handler_handler=new ClassTime_handler(c1,t1,m1,a1, c2,t2,m2,a2, c3,t3,m3,a3, c4,t4,m4,a4, c5,t5,m5,a5,keyTotal,dateids1);
+                    databaseReference.child(key).setValue(classTime_handler_handler);
+                   /* String[] keyTotalClass=dateids1.split("/");
+                    String keyTotal=keyTotalClass[0]+keyTotalClass[1]+keyTotalClass[2];*/
 //                    Log.e("totalclass", keyTotal);
                     databaseReferenceForTotalClass.child(keyTotal).setValue(classTime_handler_handler);
                     if(isOnline()){
@@ -253,8 +256,8 @@ public class addclasstimeactivity extends AppCompatActivity implements View.OnCl
                         Toast.makeText(addclasstimeactivity.this,"No Internet Connection!",Toast.LENGTH_LONG).show();
                     }
 
-
-                    date_Handler date_handler=new date_Handler(dateids1);
+                    String dateVal = new SimpleDateFormat("dd-MM-yyyy").format(new Date());
+                    date_Handler date_handler=new date_Handler(dateVal);
                     databaseReference.child(key1).setValue(date_handler);
 
 
